@@ -5,6 +5,12 @@ import java.util.Date;
 
 public class Cliente {
 	
+	private int id;
+	
+	private String situação;
+	
+	private Boolean status;
+	
 	private Usuario usuario;
 
 	private String nome;
@@ -126,6 +132,30 @@ public class Cliente {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getSituação() {
+		return situação;
+	}
+
+	public void setSituação(String situação) {
+		this.situação = situação;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
 	}
 	
 	
