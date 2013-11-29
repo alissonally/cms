@@ -1,37 +1,58 @@
 package br.com.classes;
 
-public class Produto {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Criação da Entidade Produto e da tabela do mesmo//
+ */
+	@ Entity
+	@Table (name = "Produto")
+ public class Produto implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	private float preco;
-	
-	private String categoria;
-	
-	private String subcategoria;
-	
+	@Id
+	@GeneratedValue
 	private int id;
 	
+	@Column(name = "preco",nullable = false)
+	private float preco;
+	@Column(name = "categoria",nullable = false)
+	private String categoria;
+	@Column(name = "subcategoria",nullable = false)
+	private String subcategoria;
+	@Column(name = "descricao",nullable = false)
 	private String descricao;
-	
+	@Column(name = "desconto",nullable = false)
 	private float desconto;
-	
+	@Column(name = "status",nullable = false)
 	private String status;
-	
+	@Column(name = "fornecedor",nullable = false)
 	private String fornecedor;
-	
+	@Column(name = "fabricante",nullable = false)
 	private String fabricante;
-	
+	@Column(name = "emb_compra",nullable = false)
 	private String emb_compra;
-	
+	@Column(name = "emb_venda",nullable = false)
 	private String emb_venda;
-	
+	@Column(name = "codbar",nullable = false)
 	private String codbar;
-	
+	@Column(name = "nome_popular",nullable = true)
 	private String nome_popular;
-	
+	 @Column(name = "qte_embalagem",nullable = false)
 	private Double qte_embalagem;
-	
+	 @Column(name = "fracao",nullable = false)
 	private Double fracao;
-	
+	 @Column(name = "und_fracao",nullable = false)
 	private String und_fracao;
 
 	public String getFornecedor() {
@@ -161,5 +182,4 @@ public class Produto {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
 }
