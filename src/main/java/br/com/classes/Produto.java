@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * CriaÃ§Ã£o da Entidade Produto e da tabela do mesmo//
+ * Criação da Entidade Produto e da tabela do mesmo//
  */
 	@ Entity
 	@Table (name = "Produto")
